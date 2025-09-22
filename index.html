@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Portfolio étudiant BTS SIO" />
+    <title>Portfolio - Étudiant BTS SIO SLAM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="hero" id="accueil">
+      <nav class="navbar" aria-label="Navigation principale">
+        <div class="brand" data-field="shortName">Nom étudiant</div>
+        <button
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="menu-principal"
+        >
+          <span class="sr-only">Ouvrir le menu</span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <ul class="nav-links" id="menu-principal">
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#a-propos">À propos</a></li>
+          <li><a href="#competences">Compétences</a></li>
+          <li><a href="#parcours">Parcours</a></li>
+          <li><a href="#projets">Projets</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="hero-content container">
+        <p class="eyebrow" data-field="tagline">Étudiant BTS SIO SLAM</p>
+        <h1 class="hero-title" data-field="fullName">
+          Votre Nom Complet
+        </h1>
+        <p class="hero-subtitle" data-field="heroDescription">
+          Passionné par le développement logiciel et les technologies web.
+        </p>
+        <div class="cta-group">
+          <a class="btn btn-primary" data-link="primaryCta" href="#projets"
+            >Voir mes projets</a
+          >
+          <a class="btn btn-secondary" data-link="secondaryCta" href="#contact"
+            >Me contacter</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section" id="a-propos">
+        <div class="container">
+          <h2 class="section-title" data-field="about.title">À propos</h2>
+          <div class="about-grid">
+            <div class="about-description" data-section="about.paragraphs">
+              <p>
+                Étudiant en BTS SIO option SLAM, je me forme aux métiers du
+                développement logiciel et des systèmes d'information.
+              </p>
+            </div>
+            <ul class="about-highlights" data-section="about.highlights">
+              <li>
+                <span class="label">Localisation</span>
+                <span class="value">Ville, France</span>
+              </li>
+              <li>
+                <span class="label">Email</span>
+                <span class="value">prenom.nom@email.com</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="competences">
+        <div class="container">
+          <h2 class="section-title" data-field="skills.title">Compétences</h2>
+          <p class="section-intro" data-field="skills.intro">
+            Un aperçu des technologies et outils que j'utilise au quotidien.
+          </p>
+          <div class="skills-grid" data-section="skills.categories">
+            <article class="skill-card">
+              <h3 class="skill-title">Langages</h3>
+              <ul>
+                <li>JavaScript</li>
+                <li>PHP</li>
+                <li>SQL</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="parcours">
+        <div class="container">
+          <h2 class="section-title" data-field="timeline.title">Parcours</h2>
+          <div class="timeline" data-section="timeline.items">
+            <article class="timeline-item">
+              <div class="timeline-marker" aria-hidden="true"></div>
+              <div class="timeline-content">
+                <header>
+                  <p class="timeline-period">2023 - 2025</p>
+                  <h3 class="timeline-title">BTS SIO option SLAM</h3>
+                  <p class="timeline-organization">Lycée / CFA</p>
+                </header>
+                <p>
+                  Apprentissage du développement d'applications, de la gestion de
+                  projet et de l'administration de bases de données.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="projets">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <h2 class="section-title" data-field="projects.title">Projets</h2>
+              <p class="section-intro" data-field="projects.intro">
+                Sélection de réalisations académiques et personnelles.
+              </p>
+            </div>
+            <div class="filters" data-section="projects.filters"></div>
+          </div>
+          <div class="project-grid" data-section="projects.items">
+            <article class="project-card">
+              <h3>Application de gestion</h3>
+              <p>
+                Application web permettant de suivre les interventions pour les
+                clients d'une petite entreprise de services numériques.
+              </p>
+              <p class="project-tech">Java, Spring Boot, MySQL</p>
+              <div class="project-links">
+                <a href="#">Code source</a>
+                <a href="#">Démo</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="contact">
+        <div class="container">
+          <h2 class="section-title" data-field="contact.title">Contact</h2>
+          <p class="section-intro" data-field="contact.subtitle">
+            Envie d'échanger sur un projet, une alternance ou un stage ?
+            Contactez-moi !
+          </p>
+          <div class="contact-grid">
+            <div class="contact-card">
+              <h3>Coordonnées</h3>
+              <ul>
+                <li>
+                  <span class="label">Email</span>
+                  <a data-link="contact.email" href="mailto:prenom.nom@email.com"
+                    >prenom.nom@email.com</a
+                  >
+                </li>
+                <li>
+                  <span class="label">Téléphone</span>
+                  <a data-link="contact.phone" href="tel:+33000000000"
+                    >+33 0 00 00 00 00</a
+                  >
+                </li>
+                <li class="socials" data-section="contact.socials">
+                  <span class="label">Réseaux</span>
+                  <div class="social-links">
+                    <a href="#">LinkedIn</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="contact-card">
+              <h3>Disponibilités</h3>
+              <p data-field="contact.availability">
+                Disponible pour une alternance à partir de septembre 2024.
+              </p>
+              <a class="btn btn-primary" data-link="contact.cv" href="#"
+                >Télécharger mon CV</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>
+          © <span data-field="footer.year"></span>
+          <span data-field="footer.owner">Nom étudiant</span>. Portfolio réalisé
+          avec HTML, CSS et JavaScript.
+        </p>
+      </div>
+    </footer>
+
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>
