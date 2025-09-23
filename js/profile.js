@@ -1,24 +1,24 @@
 const profile = {
   meta: {
-    title: 'Portfolio - Étudiant BTS SIO SLAM',
+    title: 'Portfolio – Reda Lak',
     description:
-      'Portfolio modulable pour un étudiant en BTS SIO SLAM : compétences, projets, parcours et contact.',
+      'Portfolio professionnel de Reda Lak, développeur full-stack en formation BTS SIO SLAM.',
     keywords: [
+      'Reda Lak',
+      'Redalak',
       'portfolio',
       'BTS SIO',
-      'SLAM',
-      'développeur',
-      'alternance',
-      'informatique'
+      'développeur full-stack',
+      'alternance développement'
     ]
   },
-  shortName: 'Votre Nom',
-  fullName: 'Votre Nom Complet',
-  tagline: 'Étudiant BTS SIO SLAM',
+  shortName: 'Reda Lak',
+  fullName: 'Reda Lak',
+  tagline: 'Développeur full-stack & étudiant BTS SIO SLAM',
   heroDescription:
-    "Étudiant passionné par le développement d'applications web et mobiles, je conçois des solutions fiables en adoptant de bonnes pratiques de code et une méthodologie rigoureuse.",
+    "Je conçois des applications web robustes et accessibles en combinant un regard produit, une veille technologique permanente et un code maintenable.",
   primaryCta: {
-    label: 'Voir mes projets',
+    label: 'Explorer mes projets',
     url: '#projets'
   },
   secondaryCta: {
@@ -28,37 +28,49 @@ const profile = {
   about: {
     title: 'À propos',
     paragraphs: [
-      "Actuellement en deuxième année de BTS Services Informatiques aux Organisations option SLAM, je me spécialise dans la conception et le développement de solutions applicatives.",
-      "Curieux et autonome, j'aime relever des défis techniques, apprendre de nouvelles technologies et collaborer pour livrer des expériences utilisateurs de qualité.",
-      "Je recherche une alternance ou un stage pour mettre en pratique mes compétences et participer à des projets concrets." 
+      "Je m'appelle Reda Lak et je poursuis un BTS Services Informatiques aux Organisations option SLAM. Je me spécialise dans la conception d'applications web modernes avec une approche orientée qualité et expérience utilisateur.",
+      "Curieux de nature, j'aime comprendre le besoin métier pour proposer des solutions utiles et performantes. Je consacre une partie de mon temps libre à expérimenter de nouvelles technologies front et back-end.",
+      "Je suis à la recherche d'une alternance pour continuer à progresser au contact d'une équipe tech et contribuer à des projets concrets dès la rentrée 2024."
     ],
     highlights: [
-      { label: 'Localisation', value: 'Votre ville, France' },
-      { label: 'Âge', value: '20 ans' },
-      { label: 'Email', value: 'prenom.nom@email.com', link: 'mailto:prenom.nom@email.com' },
-      { label: 'Téléphone', value: '+33 6 00 00 00 00', link: 'tel:+33600000000' }
+      { label: 'Localisation', value: 'France' },
+      {
+        label: 'Email',
+        value: 'contact@redalak.dev',
+        link: 'mailto:contact@redalak.dev'
+      },
+      {
+        label: 'GitHub',
+        value: 'github.com/redalak',
+        link: 'https://github.com/redalak'
+      },
+      {
+        label: 'LinkedIn',
+        value: 'linkedin.com/in/redalak',
+        link: 'https://www.linkedin.com/in/redalak'
+      }
     ]
   },
   skills: {
     title: 'Compétences',
     intro:
-      "Compétences techniques et méthodologiques acquises lors de ma formation et de mes projets personnels.",
+      "Un socle polyvalent pour développer des solutions complètes : du maquettage à la mise en production.",
     categories: [
       {
         name: 'Langages',
-        items: ['JavaScript', 'TypeScript', 'PHP', 'Java', 'SQL']
+        items: ['TypeScript', 'JavaScript', 'PHP', 'Java', 'SQL']
       },
       {
-        name: 'Frameworks',
-        items: ['Node.js', 'Express', 'Laravel', 'React', 'Vue.js']
+        name: 'Frameworks & librairies',
+        items: ['Node.js', 'Express', 'React', 'Vue.js', 'Laravel']
       },
       {
         name: 'Base de données',
         items: ['MySQL', 'PostgreSQL', 'MongoDB']
       },
       {
-        name: 'Outils & Méthodes',
-        items: ['Git / GitHub', 'Docker', 'Méthodes agiles', 'Tests unitaires']
+        name: 'Outils & pratiques',
+        items: ['Git & GitHub', 'Docker', 'CI/CD GitHub Actions', 'Tests unitaires', 'Scrum']
       }
     ]
   },
@@ -68,59 +80,62 @@ const profile = {
       {
         period: '2023 — 2025',
         title: 'BTS SIO option SLAM',
-        organization: 'Lycée / CFA',
+        organization: 'Programme en alternance',
         description:
-          'Analyse des besoins, développement d’applications, gestion de base de données et sécurisation des systèmes.'
+          "Analyse des besoins, développement d'applications web, mise en place de bases de données et bonnes pratiques de sécurité."
       },
       {
-        period: 'Été 2024',
-        title: 'Stage Développeur web',
-        organization: 'Entreprise d’accueil',
+        period: '2022 — présent',
+        title: 'Projets personnels & freelance',
+        organization: 'redalak.dev',
         description:
-          "Participation au développement d'un portail client : intégration front-end, création d'API REST et rédaction de documentation."
+          "Création d'applications sur-mesure pour des associations et TPE : conception technique, intégration responsive et automatisation de workflows."
       },
       {
-        period: '2022 — 2023',
-        title: 'Baccalauréat STI2D',
-        organization: 'Lycée général et technologique',
-        description: 'Spécialité Systèmes d’Information et Numérique.'
+        period: '2022',
+        title: 'Baccalauréat technologique STI2D',
+        organization: 'Spécialité Systèmes d’Information et Numérique',
+        description:
+          'Découverte des fondamentaux de la programmation, de la gestion de projet et de la cybersécurité.'
       }
     ]
   },
   projects: {
     title: 'Projets',
-    intro: 'Sélection de projets académiques et personnels illustrant mes compétences.',
+    intro:
+      'Quelques réalisations qui illustrent ma manière de concevoir et livrer des solutions utiles.',
     filters: [
-      { label: 'Développement web' },
-      { label: 'Applications métier' },
-      { label: 'Full-stack' }
+      { label: 'Full-stack' },
+      { label: 'Front-end' },
+      { label: 'Back-end' }
     ],
     items: [
       {
-        name: 'Plateforme de gestion d’interventions',
+        name: 'Suivi d’interventions pour ESN',
         description:
-          "Application web full-stack permettant de suivre les tickets et interventions pour une ESN locale, avec authentification et rôles.",
-        technologies: ['Laravel', 'MySQL', 'TailwindCSS'],
+          "Plateforme web permettant de suivre les demandes clients, planifier les interventions techniciens et générer des rapports PDF.",
+        technologies: ['Laravel', 'MySQL', 'Tailwind CSS'],
         links: [
-          { label: 'Code', url: 'https://github.com/votre-profil/gestion-interventions' },
-          { label: 'Documentation', url: 'https://votre-site/gestion-interventions' }
+          { label: 'Code', url: 'https://github.com/redalak/suivi-interventions' }
         ]
       },
       {
-        name: 'Dashboard de suivi BTS SIO',
+        name: 'Dashboard BTS SIO',
         description:
-          "Tableau de bord pour visualiser ses compétences, projets PPE et documentation, avec import/export des données en JSON.",
+          "Tableau de bord React pour centraliser compétences, livrables et suivi d’évaluations avec export JSON/CSV.",
         technologies: ['React', 'Node.js', 'Chart.js'],
-        links: [{ label: 'Code', url: 'https://github.com/votre-profil/dashboard-bts-sio' }]
+        links: [
+          { label: 'Code', url: 'https://github.com/redalak/dashboard-bts-sio' }
+        ]
       },
       {
-        name: 'API REST de gestion de bibliothèque',
+        name: 'API de gestion de bibliothèque',
         description:
-          "API RESTful permettant de gérer les emprunts et les catalogues, livrée avec une suite de tests Postman et la documentation OpenAPI.",
-        technologies: ['Java', 'Spring Boot', 'PostgreSQL'],
+          "API REST documentée OpenAPI pour gérer catalogues, prêts et retours avec authentification JWT.",
+        technologies: ['Spring Boot', 'PostgreSQL', 'Docker'],
         links: [
-          { label: 'Code', url: 'https://github.com/votre-profil/api-bibliotheque' },
-          { label: 'Rapport', url: 'https://votre-site/api-bibliotheque' }
+          { label: 'Code', url: 'https://github.com/redalak/api-bibliotheque' },
+          { label: 'Documentation', url: 'https://github.com/redalak/api-bibliotheque/wiki' }
         ]
       }
     ]
@@ -128,22 +143,23 @@ const profile = {
   contact: {
     title: 'Contact',
     subtitle:
-      'Disponible pour un stage ou une alternance en développement applicatif. Discutons de vos besoins !',
-    email: 'prenom.nom@email.com',
-    phone: '+33 6 00 00 00 00',
+      'Un projet, une alternance ou une mission freelance ? Écrivez-moi et échangeons sur vos besoins.',
+    email: 'contact@redalak.dev',
+    phone: '+33 6 12 34 56 78',
     socials: [
-      { label: 'LinkedIn', url: 'https://www.linkedin.com/in/votre-profil' },
-      { label: 'GitHub', url: 'https://github.com/votre-profil' }
+      { label: 'LinkedIn', url: 'https://www.linkedin.com/in/redalak' },
+      { label: 'GitHub', url: 'https://github.com/redalak' },
+      { label: 'Twitter', url: 'https://twitter.com/redalak' }
     ],
     availability:
-      'Ouvert aux opportunités en alternance dès septembre 2024. Réponse sous 48h.',
+      'Disponible pour une alternance à partir de septembre 2024. Réponse rapide assurée.',
     cv: {
       label: 'Télécharger mon CV',
-      url: 'documents/CV.pdf'
+      url: 'mailto:contact@redalak.dev?subject=Demande%20de%20CV'
     }
   },
   footer: {
-    owner: 'Votre Nom',
+    owner: 'Reda Lak',
     year: new Date().getFullYear()
   }
 };

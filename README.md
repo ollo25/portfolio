@@ -1,13 +1,13 @@
-# Portfolio BTS SIO SLAM
+# Portfolio – Reda Lak
 
-Portfolio moderne et modulable pour un étudiant en BTS SIO option SLAM. Le site est 100 % statique (HTML, CSS et JavaScript) et prêt à être déployé sur GitHub Pages.
+Portfolio modulable présentant le parcours et les projets de **Reda Lak**, développeur full-stack en formation BTS SIO option SLAM. L'application est 100&nbsp;% statique (HTML, CSS et JavaScript) et prête à être déployée sur GitHub Pages.
 
 ## Aperçu
 
 - Page unique responsive
-- Contenus pilotés par un fichier JavaScript (`js/profile.js`) facile à personnaliser
-- Sections : accueil, présentation, compétences, parcours, projets et contact
-- Navigation optimisée mobile / bureau
+- Contenus pilotés par un fichier JavaScript (`js/profile.js`) facile à adapter
+- Sections : accueil, à propos, compétences, parcours, projets et contact
+- Navigation optimisée mobile / bureau avec menu burger
 
 ## Prérequis
 
@@ -16,12 +16,10 @@ Aucun outil spécifique n'est requis pour modifier le site. Un simple éditeur d
 ## Personnalisation rapide
 
 1. Ouvrez le fichier [`js/profile.js`](js/profile.js).
-2. Modifiez les informations dans l'objet `profile` :
-   - `shortName`, `fullName`, `tagline` et `heroDescription`
-   - Sections `about`, `skills`, `timeline`, `projects` et `contact`
-   - Liens vers vos réseaux, votre CV, vos dépôts GitHub, etc.
-3. (Optionnel) Ajustez les couleurs ou la typographie dans [`css/styles.css`](css/styles.css).
-4. Prévisualisez le site en ouvrant `index.html` dans votre navigateur.
+2. Mettez à jour les informations dans l'objet `profile` (textes, liens, projets, réseaux sociaux…).
+3. Ajustez les textes présents dans [`index.html`](index.html) si vous souhaitez modifier le contenu affiché sans JavaScript.
+4. (Optionnel) Personnalisez les couleurs ou la typographie dans [`css/styles.css`](css/styles.css).
+5. Prévisualisez le site en ouvrant `index.html` dans votre navigateur.
 
 ## Déploiement sur GitHub Pages
 
