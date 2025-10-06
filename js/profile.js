@@ -1,64 +1,86 @@
 const profile = {
   meta: {
-    title: 'Portfolio - Étudiant BTS SIO SLAM',
+    title: 'Portfolio - Léo OMNES | Développeur BTS SIO SLAM',
     description:
-      'Portfolio modulable pour un étudiant en BTS SIO SLAM : compétences, projets, parcours et contact.',
+      "Portfolio de Léo OMNES, étudiant en BTS SIO SLAM et assistant de suivi projets informatiques : compétences, réalisations et parcours.",
     keywords: [
-      'portfolio',
+      'Léo Omnes',
       'BTS SIO',
       'SLAM',
       'développeur',
       'alternance',
-      'informatique'
+      'SFR Business',
+      'portfolio développeur'
     ]
   },
-  shortName: 'Votre Nom',
-  fullName: 'Votre Nom Complet',
-  tagline: 'Étudiant BTS SIO SLAM',
+  shortName: 'Léo Omnes',
+  fullName: 'Léo OMNES',
+  tagline: 'Étudiant BTS SIO SLAM & assistant projets informatiques',
   heroDescription:
-    "Étudiant passionné par le développement d'applications web et mobiles, je conçois des solutions fiables en adoptant de bonnes pratiques de code et une méthodologie rigoureuse.",
+    "Étudiant en alternance chez SFR Business, je développe des solutions fiables en mettant l'accent sur l'automatisation, le suivi d'indicateurs et l'expérience utilisateur.",
   primaryCta: {
     label: 'Voir mes projets',
     url: '#projets'
   },
   secondaryCta: {
-    label: 'Télécharger mon CV',
-    url: '#contact'
+    label: 'Me contacter',
+    url: 'mailto:leoomnes25@gmail.com'
   },
   about: {
     title: 'À propos',
     paragraphs: [
-      "Actuellement en deuxième année de BTS Services Informatiques aux Organisations option SLAM, je me spécialise dans la conception et le développement de solutions applicatives.",
-      "Curieux et autonome, j'aime relever des défis techniques, apprendre de nouvelles technologies et collaborer pour livrer des expériences utilisateurs de qualité.",
-      "Je recherche une alternance ou un stage pour mettre en pratique mes compétences et participer à des projets concrets." 
+      "Actuellement en deuxième année de BTS Services Informatiques aux Organisations option SLAM au lycée Robert Schuman, j'alterne au sein de SFR Business sur des missions de suivi et d'optimisation des projets informatiques.",
+      "Je conçois des tableaux de bord, j'automatise l'envoi de rapports et j'assure un support opérationnel en adoptant des pratiques de développement rigoureuses et documentées.",
+      "Passionné par la programmation, l'escalade et les jeux vidéo, je reste en veille sur les nouvelles technologies pour proposer des expériences numériques utiles et engageantes."
     ],
     highlights: [
-      { label: 'Localisation', value: 'Votre ville, France' },
-      { label: 'Âge', value: '20 ans' },
-      { label: 'Email', value: 'prenom.nom@email.com', link: 'mailto:prenom.nom@email.com' },
-      { label: 'Téléphone', value: '+33 6 00 00 00 00', link: 'tel:+33600000000' }
+      { label: 'Localisation', value: 'Paris 20e, France' },
+      {
+        label: 'Email',
+        value: 'leoomnes25@gmail.com',
+        link: 'mailto:leoomnes25@gmail.com'
+      },
+      { label: 'Anglais', value: 'Niveau courant' },
+      {
+        label: 'Centres d’intérêt',
+        value: 'Programmation, escalade, jeux vidéo'
+      },
+      {
+        label: 'GitHub',
+        value: 'github.com/oiie25',
+        link: 'https://github.com/oiie25'
+      }
     ]
   },
   skills: {
     title: 'Compétences',
     intro:
-      "Compétences techniques et méthodologiques acquises lors de ma formation et de mes projets personnels.",
+      "Compétences techniques et métiers développées en alternance et au cours de mes projets académiques.",
     categories: [
       {
         name: 'Langages',
-        items: ['JavaScript', 'TypeScript', 'PHP', 'Java', 'SQL']
+        items: ['PHP', 'Java', 'HTML / CSS', 'JavaScript', 'Python', 'VB.NET', 'C#', 'SQL']
       },
       {
-        name: 'Frameworks',
-        items: ['Node.js', 'Express', 'Laravel', 'React', 'Vue.js']
+        name: 'Frameworks & bibliothèques',
+        items: ['Symfony', 'React', 'Bootstrap']
       },
       {
-        name: 'Base de données',
-        items: ['MySQL', 'PostgreSQL', 'MongoDB']
+        name: 'Bases de données & ETL',
+        items: ['MySQL', 'Talend Data Integration']
       },
       {
-        name: 'Outils & Méthodes',
-        items: ['Git / GitHub', 'Docker', 'Méthodes agiles', 'Tests unitaires']
+        name: 'Outils & environnements',
+        items: ['Git & GitHub', 'Visual Studio', 'Visual Studio Code']
+      },
+      {
+        name: 'Gestion & qualité',
+        items: [
+          'Supervision d’indicateurs',
+          'Tableaux de bord',
+          'Documentation technique',
+          'Support utilisateur'
+        ]
       }
     ]
   },
@@ -66,84 +88,84 @@ const profile = {
     title: 'Parcours',
     items: [
       {
-        period: '2023 — 2025',
+        period: '2024 — Aujourd’hui',
+        title: 'Assistant de suivi projets informatiques (alternance)',
+        organization: 'SFR Business',
+        description:
+          "Supervision quotidienne des indicateurs de production, automatisation de l'envoi des rapports, administration de supports et coordination avec l'équipe data pour les tableaux de bord."
+      },
+      {
+        period: '2023',
+        title: 'Développeur web (stage)',
+        organization: 'GIC Informatique',
+        description:
+          "Maintenance d'applications métier, correction de bugs, conception d'interfaces de navigation, déploiement d'une solution d'accès à distance et support technique de niveau 1."
+      },
+      {
+        period: '2024 — 2026',
         title: 'BTS SIO option SLAM',
-        organization: 'Lycée / CFA',
+        organization: 'Lycée Robert Schuman — Dugny',
         description:
-          'Analyse des besoins, développement d’applications, gestion de base de données et sécurisation des systèmes.'
+          "Conception d'applications, gestion de bases de données, cybersécurité et gestion de projet en alternance."
       },
       {
-        period: 'Été 2024',
-        title: 'Stage Développeur web',
-        organization: 'Entreprise d’accueil',
-        description:
-          "Participation au développement d'un portail client : intégration front-end, création d'API REST et rédaction de documentation."
-      },
-      {
-        period: '2022 — 2023',
+        period: '2022 — 2024',
         title: 'Baccalauréat STI2D',
-        organization: 'Lycée général et technologique',
-        description: 'Spécialité Systèmes d’Information et Numérique.'
+        organization: 'Lycée Montaleau',
+        description:
+          'Spécialités Mathématiques, Numérique et Sciences de l’Ingénieur — mention bien.'
       }
     ]
   },
   projects: {
     title: 'Projets',
-    intro: 'Sélection de projets académiques et personnels illustrant mes compétences.',
+    intro: 'Sélection de projets académiques et personnels illustrant mon approche terrain.',
     filters: [
+      { label: 'Alternance' },
       { label: 'Développement web' },
-      { label: 'Applications métier' },
-      { label: 'Full-stack' }
+      { label: 'Data & reporting' }
     ],
     items: [
       {
-        name: 'Plateforme de gestion d’interventions',
+        name: 'Application de concours national',
         description:
-          "Application web full-stack permettant de suivre les tickets et interventions pour une ESN locale, avec authentification et rôles.",
-        technologies: ['Laravel', 'MySQL', 'TailwindCSS'],
-        links: [
-          { label: 'Code', url: 'https://github.com/votre-profil/gestion-interventions' },
-          { label: 'Documentation', url: 'https://votre-site/gestion-interventions' }
-        ]
+          "Plateforme responsive pour gérer les inscriptions et votes d'un concours national avec synchronisation temps réel et tableaux de bord dédiés au comité d'organisation.",
+        technologies: ['Symfony', 'Bootstrap', 'JavaScript'],
+        links: [{ label: 'Aperçu GitHub', url: 'https://github.com/oiie25' }]
       },
       {
-        name: 'Dashboard de suivi BTS SIO',
+        name: 'Gestion de base de données MySQL',
         description:
-          "Tableau de bord pour visualiser ses compétences, projets PPE et documentation, avec import/export des données en JSON.",
-        technologies: ['React', 'Node.js', 'Chart.js'],
-        links: [{ label: 'Code', url: 'https://github.com/votre-profil/dashboard-bts-sio' }]
+          "Modélisation, création de scripts SQL (requêtes, triggers) et génération de rapports analytiques pour piloter une base de données métier.",
+        technologies: ['MySQL', 'SQL', 'Talend'],
+        links: [{ label: 'Documentation', url: 'https://github.com/oiie25' }]
       },
       {
-        name: 'API REST de gestion de bibliothèque',
+        name: 'Portfolio personnel',
         description:
-          "API RESTful permettant de gérer les emprunts et les catalogues, livrée avec une suite de tests Postman et la documentation OpenAPI.",
-        technologies: ['Java', 'Spring Boot', 'PostgreSQL'],
-        links: [
-          { label: 'Code', url: 'https://github.com/votre-profil/api-bibliotheque' },
-          { label: 'Rapport', url: 'https://votre-site/api-bibliotheque' }
-        ]
+          "Site vitrine développé en HTML, CSS et JavaScript avec animations légères et formulaire de contact pour valoriser mon parcours.",
+        technologies: ['HTML', 'CSS', 'JavaScript'],
+        links: [{ label: 'Code source', url: 'https://github.com/oiie25/portfolio' }]
       }
     ]
   },
   contact: {
     title: 'Contact',
     subtitle:
-      'Disponible pour un stage ou une alternance en développement applicatif. Discutons de vos besoins !',
-    email: 'prenom.nom@email.com',
-    phone: '+33 6 00 00 00 00',
-    socials: [
-      { label: 'LinkedIn', url: 'https://www.linkedin.com/in/votre-profil' },
-      { label: 'GitHub', url: 'https://github.com/votre-profil' }
-    ],
+      "En alternance chez SFR Business, je reste disponible pour échanger sur vos projets et opportunités de collaboration.",
+    email: 'leoomnes25@gmail.com',
+    phone: null,
+    phoneNote: 'Disponible sur demande',
+    socials: [{ label: 'GitHub', url: 'https://github.com/oiie25' }],
     availability:
-      'Ouvert aux opportunités en alternance dès septembre 2024. Réponse sous 48h.',
+      "En alternance active — réponse assurée sous 48h ouvrées.",
     cv: {
-      label: 'Télécharger mon CV',
-      url: 'documents/CV.pdf'
+      label: 'Demander mon CV',
+      url: 'mailto:leoomnes25@gmail.com?subject=Demande%20de%20CV'
     }
   },
   footer: {
-    owner: 'Votre Nom',
+    owner: 'Léo OMNES',
     year: new Date().getFullYear()
   }
 };
