@@ -197,10 +197,21 @@ const renderContact = (contact) => {
     url: `mailto:${contact.email}`
   });
 
-  setLink('contact.phone', {
-    label: contact.phone,
-    url: `tel:${contact.phone.replace(/\s+/g, '')}`
-  });
+  if (contact.phone) {
+    setLink('contact.phone', {
+      label: contact.phone,
+      url: `tel:${contact.phone.replace(/\s+/g, '')}`
+    });
+  } else {
+    document
+      .querySelectorAll('[data-link="contact.phone"]')
+      .forEach((anchor) => {
+        const span = document.createElement('span');
+        span.className = 'value';
+        span.textContent = contact.phoneNote || 'Disponible sur demande';
+        anchor.replaceWith(span);
+      });
+  }
 
   setLink('contact.cv', contact.cv);
   setText('contact.availability', contact.availability);
