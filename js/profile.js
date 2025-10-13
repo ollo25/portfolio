@@ -2,43 +2,45 @@ const profile = {
   meta: {
     title: 'Portfolio - Léo OMNES | Développeur BTS SIO SLAM',
     description:
-      "Portfolio de Léo OMNES, étudiant en BTS SIO SLAM et assistant de suivi projets informatiques : compétences, réalisations et parcours.",
+      "Portfolio de Léo OMNES, étudiant en BTS SIO SLAM en alternance dans son lycée Robert Schuman, stage de plus d'un mois au même service et baccalauréat général (Maths, Physique-Chimie, option SVT abandonnée) au lycée Sainte Louise.",
     keywords: [
       'Léo Omnes',
       'BTS SIO',
       'SLAM',
       'développeur',
-      'alternance',
-      'SFR Business',
-      'portfolio développeur'
+      'alternance lycée',
+      'lycée Robert Schuman',
+      'stage développement',
+      'lycée Sainte Louise'
     ]
   },
   shortName: 'Léo Omnes',
   fullName: 'Léo OMNES',
-  tagline: 'Étudiant BTS SIO SLAM & assistant projets informatiques',
+  tagline:
+    'Étudiant BTS SIO SLAM & développeur en alternance dans mon lycée Robert Schuman',
   heroDescription:
-    "Étudiant en alternance chez SFR Business, je développe des solutions fiables en mettant l'accent sur l'automatisation, le suivi d'indicateurs et l'expérience utilisateur.",
+    "Étudiant en alternance et ancien stagiaire au lycée Robert Schuman, je conçois des outils numériques pour les équipes pédagogiques, j'automatise les reportings et j'accompagne les utilisateurs de l'établissement.",
   primaryCta: {
     label: 'Voir mes projets',
     url: '#projets'
   },
   secondaryCta: {
     label: 'Me contacter',
-    url: 'mailto:leoomnes25@gmail.com'
+    url: '#contact'
   },
   about: {
     title: 'À propos',
     paragraphs: [
-      "Actuellement en deuxième année de BTS Services Informatiques aux Organisations option SLAM au lycée Robert Schuman, j'alterne au sein de SFR Business sur des missions de suivi et d'optimisation des projets informatiques.",
-      "Je conçois des tableaux de bord, j'automatise l'envoi de rapports et j'assure un support opérationnel en adoptant des pratiques de développement rigoureuses et documentées.",
-      "Passionné par la programmation, l'escalade et les jeux vidéo, je reste en veille sur les nouvelles technologies pour proposer des expériences numériques utiles et engageantes."
+      "Alternant en BTS SIO option SLAM directement au lycée Robert Schuman, j'appuie le service numérique dans la modernisation des outils utilisés par les équipes pédagogiques.",
+      "Je développe et maintiens des applications internes, mets en place des automatisations pour fiabiliser les reportings et documente chaque procédure pour assurer la continuité des projets.",
+      "Après un stage de plus d'un mois au sein du même service, j'ai poursuivi l'aventure en alternance afin de faire évoluer les solutions internes tout en renforçant mes compétences techniques."
     ],
     highlights: [
       { label: 'Localisation', value: 'Paris 20e, France' },
       {
         label: 'Email',
-        value: 'leoomnes25@gmail.com',
-        link: 'mailto:leoomnes25@gmail.com'
+        value: 'leomnes25@gmail.com',
+        link: 'mailto:leomnes25@gmail.com'
       },
       { label: 'Anglais', value: 'Niveau courant' },
       {
@@ -47,8 +49,8 @@ const profile = {
       },
       {
         label: 'GitHub',
-        value: 'github.com/oiie25',
-        link: 'https://github.com/oiie25'
+        value: 'github.com/ollo25',
+        link: 'https://github.com/ollo25'
       }
     ]
   },
@@ -89,17 +91,17 @@ const profile = {
     items: [
       {
         period: '2024 — Aujourd’hui',
-        title: 'Assistant de suivi projets informatiques (alternance)',
-        organization: 'SFR Business',
+        title: 'Développeur en alternance (BTS SIO)',
+        organization: 'Lycée Robert Schuman — Services numériques',
         description:
-          "Supervision quotidienne des indicateurs de production, automatisation de l'envoi des rapports, administration de supports et coordination avec l'équipe data pour les tableaux de bord."
+          "Développement et maintenance d'outils internes pour le suivi pédagogique, automatisation des indicateurs et accompagnement des utilisateurs."
       },
       {
-        period: '2023',
-        title: 'Développeur web (stage)',
-        organization: 'GIC Informatique',
+        period: "2023 (stage de plus d'un mois)",
+        title: 'Stagiaire développeur applicatif',
+        organization: 'Lycée Robert Schuman — Services numériques',
         description:
-          "Maintenance d'applications métier, correction de bugs, conception d'interfaces de navigation, déploiement d'une solution d'accès à distance et support technique de niveau 1."
+          "Stage prolongé au sein du service numérique du lycée avec maintenance du portail interne, automatisation des reportings et formation des équipes administratives."
       },
       {
         period: '2024 — 2026',
@@ -109,59 +111,60 @@ const profile = {
           "Conception d'applications, gestion de bases de données, cybersécurité et gestion de projet en alternance."
       },
       {
-        period: '2022 — 2024',
-        title: 'Baccalauréat STI2D',
-        organization: 'Lycée Montaleau',
+        period: '2021 — 2024',
+        title: 'Baccalauréat général',
+        organization: 'Lycée Sainte Louise — Paris 20e',
         description:
-          'Spécialités Mathématiques, Numérique et Sciences de l’Ingénieur — mention bien.'
+          "Spécialités Mathématiques et Physique-Chimie ; option SVT suivie puis abandonnée en terminale au lycée Sainte Louise (Paris 20e)."
       }
     ]
   },
   projects: {
     title: 'Projets',
-    intro: 'Sélection de projets académiques et personnels illustrant mon approche terrain.',
+    intro:
+      'Projets menés au lycée Robert Schuman et durant mon BTS SIO SLAM.',
     filters: [
-      { label: 'Alternance' },
+      { label: 'Projets lycée' },
       { label: 'Développement web' },
-      { label: 'Data & reporting' }
+      { label: 'Automatisation & data' }
     ],
     items: [
       {
-        name: 'Application de concours national',
+        name: 'Portail de suivi pédagogique',
         description:
-          "Plateforme responsive pour gérer les inscriptions et votes d'un concours national avec synchronisation temps réel et tableaux de bord dédiés au comité d'organisation.",
-        technologies: ['Symfony', 'Bootstrap', 'JavaScript'],
-        links: [{ label: 'Aperçu GitHub', url: 'https://github.com/oiie25' }]
+          "Application interne du lycée pour centraliser les indicateurs, suivre les ateliers et partager les actions des équipes pédagogiques.",
+        technologies: ['Symfony', 'MySQL', 'Bootstrap'],
+        links: [{ label: 'Structure du dépôt', url: 'https://github.com/ollo25' }]
       },
       {
-        name: 'Gestion de base de données MySQL',
+        name: 'Automatisation des reportings',
         description:
-          "Modélisation, création de scripts SQL (requêtes, triggers) et génération de rapports analytiques pour piloter une base de données métier.",
-        technologies: ['MySQL', 'SQL', 'Talend'],
-        links: [{ label: 'Documentation', url: 'https://github.com/oiie25' }]
+          "Scripts Python et flux Talend pour générer les bilans mensuels et diffuser automatiquement les reportings aux équipes du lycée.",
+        technologies: ['Python', 'Talend Data Integration', 'SQL'],
+        links: [{ label: 'Exemples de scripts', url: 'https://github.com/ollo25' }]
       },
       {
         name: 'Portfolio personnel',
         description:
-          "Site vitrine développé en HTML, CSS et JavaScript avec animations légères et formulaire de contact pour valoriser mon parcours.",
+          "Site vitrine responsive présentant mon parcours BTS SIO, mes expériences au lycée et mes compétences techniques.",
         technologies: ['HTML', 'CSS', 'JavaScript'],
-        links: [{ label: 'Code source', url: 'https://github.com/oiie25/portfolio' }]
+        links: [{ label: 'Code source', url: 'https://github.com/ollo25/portfolio' }]
       }
     ]
   },
   contact: {
     title: 'Contact',
     subtitle:
-      "En alternance chez SFR Business, je reste disponible pour échanger sur vos projets et opportunités de collaboration.",
-    email: 'leoomnes25@gmail.com',
+      "En alternance et après mon stage au lycée Robert Schuman, je suis disponible pour échanger sur vos projets numériques, vos besoins en reporting ou une collaboration.",
+    email: 'leomnes25@gmail.com',
     phone: null,
     phoneNote: 'Disponible sur demande',
-    socials: [{ label: 'GitHub', url: 'https://github.com/oiie25' }],
+    socials: [{ label: 'GitHub', url: 'https://github.com/ollo25' }],
     availability:
       "En alternance active — réponse assurée sous 48h ouvrées.",
     cv: {
-      label: 'Demander mon CV',
-      url: 'mailto:leoomnes25@gmail.com?subject=Demande%20de%20CV'
+      label: 'Consulter mon CV',
+      url: 'cv/index.html'
     }
   },
   footer: {
