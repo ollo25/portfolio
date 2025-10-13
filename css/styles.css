@@ -200,6 +200,22 @@ img {
   font-size: 1.1rem;
 }
 
+.hero-note {
+  margin-top: 0.75rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.hero-note a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.hero-note a:hover,
+.hero-note a:focus {
+  text-decoration: underline;
+}
+
 .cta-group {
   display: flex;
   flex-wrap: wrap;
