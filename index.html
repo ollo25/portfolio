@@ -1,384 +1,269 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Portfolio de Léo OMNES, étudiant en BTS SIO SLAM en alternance dans son lycée Robert Schuman, stage de plus d'un mois au même service et baccalauréat général (Maths, Physique-Chimie, option SVT abandonnée) au lycée Sainte Louise."
-    />
-    <title>Portfolio - Léo OMNES | Développeur BTS SIO SLAM</title>
+    <title>Portfolio — Léo OMNES | BTS SIO SLAM</title>
+    <meta name="description" content="Portfolio one-page de Léo OMNES — BTS SIO SLAM. Projets, compétences (Symfony avancé), formation et contact." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
-  <body>
-    <header class="hero" id="accueil">
-      <nav class="navbar" aria-label="Navigation principale">
-        <div class="brand" data-field="shortName">Léo Omnes</div>
-        <button
-          class="nav-toggle"
-          aria-expanded="false"
-          aria-controls="menu-principal"
-        >
-          <span class="sr-only">Ouvrir le menu</span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </button>
-        <ul class="nav-links" id="menu-principal">
-          <li><a href="#accueil">Accueil</a></li>
-          <li><a href="#a-propos">À propos</a></li>
-          <li><a href="#competences">Compétences</a></li>
-          <li><a href="#parcours">Parcours</a></li>
-          <li><a href="#projets">Projets</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li>
-            <a href="cv/index.html" target="_blank" rel="noopener noreferrer"
-              >CV</a
-            >
-          </li>
-        </ul>
-      </nav>
-      <div class="hero-content container">
-        <p class="eyebrow" data-field="tagline">
-          Étudiant BTS SIO SLAM &amp; développeur en alternance dans mon lycée
-          Robert Schuman
-        </p>
-        <h1 class="hero-title" data-field="fullName">Léo OMNES</h1>
-        <p class="hero-subtitle" data-field="heroDescription">
-          Étudiant en alternance et ancien stagiaire au lycée Robert Schuman,
-          je conçois des outils numériques pour accompagner les équipes
-          pédagogiques, automatiser les reportings et faciliter le suivi des
-          projets de l'établissement.
-        </p>
-        <div class="cta-group">
-          <a class="btn btn-primary" data-link="primaryCta" href="#projets"
-            >Voir mes projets</a
-          >
-          <a class="btn btn-secondary" data-link="secondaryCta" href="#contact"
-            >Me contacter</a
-          >
-        </div>
-        <p class="hero-note">
-          <a href="cv/index.html" rel="noopener noreferrer">Consulter mon CV en ligne</a>
-        </p>
-      </div>
-    </header>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+    <style>
+        :root{
+            --bg:#0b0d12; --card:#10141d; --ink:#e5e7eb; --muted:#9aa4b2;
+            --line:#1e2633; --accent:#7c5cff; --accent-2:#22d3ee;
+            --radius:16px; --shadow:0 10px 30px rgba(0,0,0,.35); --max:1100px;
+        }
+        *{box-sizing:border-box}
+        html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;scroll-behavior:smooth}
+        a{color:inherit;text-decoration:none}
+        img{max-width:100%;display:block}
+        .wrap{max-width:var(--max);margin:auto;padding:0 20px}
 
-    <main>
-      <section class="section" id="a-propos">
-        <div class="container">
-          <h2 class="section-title" data-field="about.title">À propos</h2>
-          <div class="about-grid">
-            <div class="about-description" data-section="about.paragraphs">
-              <p>
-                Alternant en BTS SIO option SLAM directement au lycée Robert
-                Schuman, j'appuie le service numérique dans la modernisation
-                des outils utilisés par les équipes pédagogiques.
-              </p>
-              <p>
-                Je développe et maintiens des applications internes, mets en
-                place des automatisations pour fiabiliser les reportings et
-                documente chaque procédure afin d'assurer la continuité des
-                projets.
-              </p>
-              <p>
-                Après un stage de plus d'un mois au sein du même service, j'ai
-                poursuivi l'aventure en alternance pour faire évoluer les
-                solutions internes tout en progressant sur mes compétences
-                techniques.
-              </p>
+        .nav{position:sticky;top:0;z-index:50;background:rgba(11,13,18,.6);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--line)}
+        .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+        .brand{display:flex;align-items:center;gap:10px;font-family:"Space Grotesk";font-weight:700}
+        .brand .dot{width:10px;height:10px;border-radius:999px;background:linear-gradient(135deg,var(--accent),var(--accent-2))}
+        .menu{display:flex;gap:22px}
+        .menu a{font-weight:600;color:var(--muted)}
+        .menu a:hover{color:var(--ink)}
+
+        .hero{padding:72px 0 40px;border-bottom:1px solid var(--line);background:
+                radial-gradient(800px 400px at 70% -10%, rgba(124,92,255,.18), transparent 60%),
+                radial-gradient(600px 300px at 10% 0%, rgba(34,211,238,.12), transparent 60%)}
+        .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center}
+        .kicker{display:inline-flex;gap:10px;align-items:center;padding:6px 10px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:12px}
+        .kicker .pill{width:8px;height:8px;border-radius:999px;background:linear-gradient(135deg,var(--accent),var(--accent-2))}
+        h1{font-family:"Space Grotesk",Inter,sans-serif;font-size:48px;line-height:1.1;margin:14px 0 10px}
+        .lead{color:var(--muted);font-size:16px;max-width:60ch}
+        .actions{display:flex;gap:12px;margin-top:22px;flex-wrap:wrap}
+
+        .btn{
+            --bgc:transparent;--bd:var(--line);--fg:var(--ink);
+            border:1px solid var(--bd);background:var(--bgc);color:var(--fg);
+            padding:12px 16px;border-radius:12px;font-weight:700;letter-spacing:.2px;
+            transition:transform .08s ease, box-shadow .2s ease, border-color .2s ease, background .2s ease, color .2s ease;
+            display:inline-flex;align-items:center;gap:10px;cursor:pointer
+        }
+        .btn:active{transform:translateY(1px)}
+        .btn-primary{--bgc:linear-gradient(135deg,var(--accent),var(--accent-2));--bd:transparent;--fg:#0a0c10;box-shadow:var(--shadow)}
+        .btn-ghost{--bgc:transparent;--bd:var(--line);--fg:var(--ink)}
+        .btn:hover{box-shadow:0 8px 26px rgba(124,92,255,.18)}
+        .btn svg{width:18px;height:18px}
+
+        section{padding:56px 0;border-bottom:1px solid var(--line)}
+        .section-title{font-family:"Space Grotesk";font-size:28px;margin:0 0 18px}
+        .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+        .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+        .card h3{margin:6px 0 10px;font-size:18px}
+        .meta{color:var(--muted);font-size:13px}
+        .row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+        .list{margin:0;padding-left:18px;color:var(--muted)}
+        .list li{margin:6px 0}
+
+        footer{padding:40px 0;color:var(--muted);text-align:center}
+
+        @media (max-width: 900px){
+            .hero-grid{grid-template-columns:1fr}
+            .cards{grid-template-columns:1fr 1fr}
+            .row{grid-template-columns:1fr}
+            h1{font-size:38px}
+        }
+        @media (max-width: 600px){
+            .cards{grid-template-columns:1fr}
+            h1{font-size:32px}
+        }
+
+        .fade-in{opacity:0;transform:translateY(8px);animation:fade .6s ease forwards}
+        .fade-in.d2{animation-delay:.08s}.fade-in.d3{animation-delay:.16s}.fade-in.d4{animation-delay:.24s}
+        @keyframes fade{to{opacity:1;transform:none}}
+        .avatar{width:220px;height:220px;border-radius:20px;overflow:hidden;border:1px solid var(--line);box-shadow:0 20px 40px rgba(0,0,0,.35)}
+    </style>
+</head>
+<body>
+
+<header class="nav">
+    <div class="wrap nav-inner">
+        <div class="brand"><span class="dot"></span><span>Léo OMNES</span></div>
+        <nav class="menu">
+            <a href="#about">À propos</a>
+            <a href="#formation">Formation</a>
+            <a href="#projects">Projets</a>
+            <a href="#skills">Compétences</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="wrap hero-grid">
+        <div>
+            <div class="kicker fade-in"><span class="pill"></span> BTS SIO SLAM — 2024–2026</div>
+            <h1 class="fade-in d2">Développeur back/front — Symfony avancé.</h1>
+            <p class="lead fade-in d3">
+                Étudiant au Lycée Robert Schuman (Dugny). Je travaille principalement avec <strong>Symfony</strong>,
+                PHP, SQL (MariaDB), HTML/CSS/JS et Java.
+            </p>
+            <div class="actions fade-in d4">
+                <!-- ICI : lien direct avec download -->
+                <a id="btn-cv" class="btn btn-primary" href="./assets/CV-Leo-OMNES.pdf" download>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                         stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                        <path d="M7 10l5 5 5-5"/>
+                        <path d="M12 15V3"/>
+                    </svg>
+                    Consulter mon CV
+                </a>
+                <a class="btn btn-ghost" href="https://github.com/ollo25" target="_blank" rel="noopener">GitHub</a>
+                <a class="btn btn-ghost" href="#contact">Me contacter</a>
             </div>
-            <ul class="about-highlights" data-section="about.highlights">
-              <li>
-                <span class="label">Localisation</span>
-                <span class="value">Paris 20e, France</span>
-              </li>
-              <li>
-                <span class="label">Email</span>
-                <a class="value" href="mailto:leomnes25@gmail.com"
-                  >leomnes25@gmail.com</a
-                >
-              </li>
-              <li>
-                <span class="label">Anglais</span>
-                <span class="value">Niveau courant</span>
-              </li>
-              <li>
-                <span class="label">Centres d’intérêt</span>
-                <span class="value">Programmation, escalade, jeux vidéo</span>
-              </li>
-              <li>
-                <span class="label">GitHub</span>
-                <a class="value" href="https://github.com/ollo25"
-                  >github.com/ollo25</a
-                >
-              </li>
-            </ul>
-          </div>
         </div>
-      </section>
 
-      <section class="section" id="competences">
-        <div class="container">
-          <h2 class="section-title" data-field="skills.title">Compétences</h2>
-          <p class="section-intro" data-field="skills.intro">
-            Compétences techniques et métiers développées en alternance et au
-            cours de mes projets académiques.
-          </p>
-          <div class="skills-grid" data-section="skills.categories">
-            <article class="skill-card">
-              <h3 class="skill-title">Langages</h3>
-              <ul>
-                <li>PHP</li>
-                <li>Java</li>
-                <li>HTML / CSS</li>
-                <li>JavaScript</li>
-                <li>Python</li>
-                <li>VB.NET</li>
-                <li>C#</li>
-                <li>SQL</li>
-              </ul>
-            </article>
-            <article class="skill-card">
-              <h3 class="skill-title">Frameworks &amp; bibliothèques</h3>
-              <ul>
-                <li>Symfony</li>
-                <li>React</li>
-                <li>Bootstrap</li>
-              </ul>
-            </article>
-            <article class="skill-card">
-              <h3 class="skill-title">Bases de données &amp; ETL</h3>
-              <ul>
-                <li>MySQL</li>
-                <li>Talend Data Integration</li>
-              </ul>
-            </article>
-            <article class="skill-card">
-              <h3 class="skill-title">Outils &amp; environnements</h3>
-              <ul>
-                <li>Git &amp; GitHub</li>
-                <li>Visual Studio</li>
-                <li>Visual Studio Code</li>
-              </ul>
-            </article>
-            <article class="skill-card">
-              <h3 class="skill-title">Gestion &amp; qualité</h3>
-              <ul>
-                <li>Supervision d’indicateurs</li>
-                <li>Tableaux de bord</li>
-                <li>Documentation technique</li>
-                <li>Support utilisateur</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </section>
+    </div>
+</section>
 
-      <section class="section section-alt" id="parcours">
-        <div class="container">
-          <h2 class="section-title" data-field="timeline.title">Parcours</h2>
-          <div class="timeline" data-section="timeline.items">
-            <article class="timeline-item">
-              <div class="timeline-marker" aria-hidden="true"></div>
-              <div class="timeline-content">
-                <header>
-                  <p class="timeline-period">2024 — Aujourd’hui</p>
-                  <h3 class="timeline-title">
-                    Développeur en alternance (BTS SIO)
-                  </h3>
-                  <p class="timeline-organization">
-                    Lycée Robert Schuman — Services numériques
-                  </p>
-                </header>
-                <p>
-                  Développement et maintenance d'outils internes pour le suivi
-                  pédagogique, automatisation des indicateurs et accompagnement
-                  des utilisateurs de l'établissement.
+<section id="about">
+    <div class="wrap">
+        <h2 class="section-title">À propos</h2>
+        <div class="row">
+            <div class="card">
+                <h3>Profil</h3>
+                <p class="meta">
+                    Étudiant en BTS SIO SLAM, passionné par le développement logiciel.
+                    Organisation, qualité de code et documentation claire — avec une appétence forte pour Symfony.
                 </p>
-              </div>
-            </article>
-            <article class="timeline-item">
-              <div class="timeline-marker" aria-hidden="true"></div>
-              <div class="timeline-content">
-                <header>
-                  <p class="timeline-period">2023 (stage de plus d'un mois)</p>
-                  <h3 class="timeline-title">Stagiaire développeur applicatif</h3>
-                  <p class="timeline-organization">
-                    Lycée Robert Schuman — Services numériques
-                  </p>
-                </header>
-                <p>
-                  Stage prolongé au sein du service numérique du lycée avec
-                  maintenance du portail interne, automatisation des reportings
-                  et formation des équipes administratives.
-                </p>
-              </div>
-            </article>
-            <article class="timeline-item">
-              <div class="timeline-marker" aria-hidden="true"></div>
-              <div class="timeline-content">
-                <header>
-                  <p class="timeline-period">2024 — 2026</p>
-                  <h3 class="timeline-title">BTS SIO option SLAM</h3>
-                  <p class="timeline-organization">
-                    Lycée Robert Schuman — Dugny
-                  </p>
-                </header>
-                <p>
-                  Conception d'applications, gestion de bases de données,
-                  cybersécurité et gestion de projet en alternance.
-                </p>
-              </div>
-            </article>
-            <article class="timeline-item">
-              <div class="timeline-marker" aria-hidden="true"></div>
-              <div class="timeline-content">
-                <header>
-                  <p class="timeline-period">2021 — 2024</p>
-                  <h3 class="timeline-title">Baccalauréat général</h3>
-                  <p class="timeline-organization">
-                    Lycée Sainte Louise — Paris 20e
-                  </p>
-                </header>
-                <p>
-                  Spécialités Mathématiques et Physique-Chimie ; option SVT
-                  suivie puis abandonnée en terminale au lycée Sainte Louise
-                  (Paris 20e).
-                </p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="projets">
-        <div class="container">
-          <div class="section-header">
-            <div>
-              <h2 class="section-title" data-field="projects.title">Projets</h2>
-              <p class="section-intro" data-field="projects.intro">
-                Projets menés au lycée Robert Schuman et dans le cadre de mon
-                BTS SIO SLAM.
-              </p>
+                <ul class="list">
+                    <li>Basé à Paris (75020)</li>
+                    <li>Stage & alternance : déjà pourvus</li>
+                    <li>Centres d’intérêt : programmation, escalade, jeux vidéo</li>
+                </ul>
             </div>
-            <div class="filters" data-section="projects.filters"></div>
-          </div>
-          <div class="project-grid" data-section="projects.items">
-            <article class="project-card">
-              <h3>Portail de suivi pédagogique</h3>
-              <p>
-                Application interne du lycée pour centraliser les indicateurs,
-                suivre les ateliers et partager les actions des équipes
-                pédagogiques.
-              </p>
-              <p class="project-tech">Symfony · MySQL · Bootstrap</p>
-              <div class="project-links">
-                <a href="https://github.com/ollo25" target="_blank" rel="noopener noreferrer"
-                  >Structure du dépôt</a
-                >
-              </div>
-            </article>
-            <article class="project-card">
-              <h3>Automatisation des reportings</h3>
-              <p>
-                Scripts Python et flux Talend pour générer les bilans mensuels
-                et diffuser automatiquement les reportings aux équipes du lycée.
-              </p>
-              <p class="project-tech">Python · Talend Data Integration · SQL</p>
-              <div class="project-links">
-                <a href="https://github.com/ollo25" target="_blank" rel="noopener noreferrer"
-                  >Exemples de scripts</a
-                >
-              </div>
-            </article>
-            <article class="project-card">
-              <h3>Portfolio personnel</h3>
-              <p>
-                Site vitrine responsive présentant mon parcours BTS SIO, mes
-                expériences au lycée et mes compétences techniques.
-              </p>
-              <p class="project-tech">HTML · CSS · JavaScript</p>
-              <div class="project-links">
-                <a
-                  href="https://github.com/ollo25/portfolio"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Code source</a
-                >
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-alt" id="contact">
-        <div class="container">
-          <h2 class="section-title" data-field="contact.title">Contact</h2>
-          <p class="section-intro" data-field="contact.subtitle">
-            En alternance et après mon stage au lycée Robert Schuman, je reste
-            disponible pour échanger sur vos projets numériques, vos besoins en
-            reporting ou une collaboration.
-          </p>
-          <div class="contact-grid">
-            <div class="contact-card">
-              <h3>Coordonnées</h3>
-              <ul>
-                <li>
-                  <span class="label">Email</span>
-                  <a
-                    data-link="contact.email"
-                    href="mailto:leomnes25@gmail.com"
-                    >leomnes25@gmail.com</a
-                  >
-                </li>
-                <li>
-                  <span class="label">Téléphone</span>
-                  <a data-link="contact.phone" href="#contact"
-                    >Disponible sur demande</a
-                  >
-                </li>
-                <li class="socials" data-section="contact.socials">
-                  <span class="label">Réseaux</span>
-                  <div class="social-links">
-                    <a href="https://github.com/ollo25" target="_blank" rel="noopener noreferrer"
-                      >GitHub</a
-                    >
-                  </div>
-                </li>
-              </ul>
+            <div class="card">
+                <h3>Coordonnées</h3>
+                <ul class="list">
+                    <li>Email : <a href="mailto:leomnes25@gmail.com">leomnes25@gmail.com</a></li>
+                    <li>GitHub : <a href="https://github.com/ollo25" target="_blank" rel="noopener">github.com/ollo25</a></li>
+                    <li>LinkedIn : <a href="https://www.linkedin.com/in/l%C3%A9o-omnes-a8a0b5346/" target="_blank" rel="noopener">linkedin.com/in/léo-omnes-a8a0b5346</a></li>
+                </ul>
             </div>
-            <div class="contact-card">
-              <h3>Disponibilités</h3>
-              <p data-field="contact.availability">
-                En alternance active — réponse assurée sous 48h ouvrées.
-              </p>
-              <a class="btn btn-primary" data-link="contact.cv" href="cv/index.html"
-                >Consulter mon CV</a
-              >
-            </div>
-          </div>
         </div>
-      </section>
-    </main>
+    </div>
+</section>
 
-    <footer class="footer">
-      <div class="container">
-        <p>
-          © <span data-field="footer.year"></span>
-          <span data-field="footer.owner">Léo OMNES</span>. Portfolio réalisé
-          avec HTML, CSS et JavaScript.
-        </p>
-      </div>
-    </footer>
+<section id="formation">
+    <div class="wrap">
+        <h2 class="section-title">Formation</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>BTS SIO — SLAM (2024–2026)</h3>
+                <p class="meta">Lycée Robert Schuman, Dugny</p>
+                <ul class="list">
+                    <li>Dév : Symfony (avancé), PHP, HTML/CSS/JS, Java</li>
+                    <li>Bases de données : SQL / MariaDB (Merise)</li>
+                    <li>Gestion de projet, documentation, travail en équipe</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Baccalauréat général (2021–2024)</h3>
+                <p class="meta">Spécialités : Mathématiques, Physique-Chimie — SVT suivie jusqu’en Première (abandonnée en Terminale)</p>
+                <p class="meta">Lycée Sainte-Louise, Paris 20e</p>
+            </div>
+            <div class="card">
+                <h3>Nuit de l’Info 2024</h3>
+                <p class="meta">Hackathon national — site PHP développé en équipe en une nuit</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <script type="module" src="js/app.js"></script>
-  </body>
+<section id="projects">
+    <div class="wrap">
+        <h2 class="section-title">Projets</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Gestion de cinéma (PHP)</h3>
+                <p class="meta">Site de réservation de séances : films, horaires, panier / réservation.</p>
+                <div class="actions"><a class="btn btn-primary" href="https://github.com/ollo25/cinema_projet_A_B_L_O" target="_blank" rel="noopener">Repo GitHub</a></div>
+            </div>
+            <div class="card">
+                <h3>Projet vol (Symfony — 1er projet)</h3>
+                <p class="meta">Découverte de Symfony : entités, CRUD, routes, formulaires et persistance.</p>
+                <div class="actions"><a class="btn btn-primary" href="https://github.com/ollo25/symfony_projet_vol" target="_blank" rel="noopener">Repo GitHub</a></div>
+            </div>
+            <div class="card">
+                <h3>Gestion de zoo (Java / Console)</h3>
+                <p class="meta">Simulation console : animaux, enclos, actions et états avec logique métier.</p>
+                <div class="actions"><a class="btn btn-primary" href="https://github.com/ollo25/gestionZoo" target="_blank" rel="noopener">Repo GitHub</a></div>
+            </div>
+            <div class="card">
+                <h3>MasterMind (PHP)</h3>
+                <p class="meta">Implémentation du jeu : génération de code, essais, feedback et victoire/défaite.</p>
+                <div class="actions"><a class="btn btn-primary" href="https://github.com/ollo25/MasterMind" target="_blank" rel="noopener">Repo GitHub</a></div>
+            </div>
+            <div class="card">
+                <h3>Tic-tac-toe (PHP)</h3>
+                <p class="meta">Grille, vérification des lignes/colonnes/diagonales, gestion des tours.</p>
+                <div class="actions"><a class="btn btn-primary" href="https://github.com/ollo25/tictactoe" target="_blank" rel="noopener">Repo GitHub</a></div>
+            </div>
+            <div class="card">
+                <h3>Nuit de l’Info (PHP — Hackathon)</h3>
+                <p class="meta">Développement d’un site en équipe en une nuit blanche : répartition des tâches, intégration rapide.</p>
+                <div class="actions"><a class="btn btn-primary" href="https://github.com/MLSFalcon/nuit-de-l-info" target="_blank" rel="noopener">Repo GitHub</a></div>
+
+            </div>
+            <div class="card">
+                <h3>To-Do List (JavaFX)</h3>
+                <p class="meta">Premier projet JavaFX : tâches, états, persistance simple et interface réactive.</p>
+                <div class="actions"><a class="btn btn-primary" href="https://github.com/ollo25/to_do_list_JavaFX" target="_blank" rel="noopener">Repo GitHub</a></div>
+            </div>
+            <div class="card">
+                <h3>Gestion Élève (Stage PHP)</h3>
+                <p class="meta">Suivi rapide des élèves : alternance & stage, contacts référents, accès aux infos clés.</p>
+                <div class="actions"><a class="btn btn-primary" href="https://github.com/ollo25/stage_gestionEleve" target="_blank" rel="noopener">Repo GitHub</a></div>
+            </div>
+            <div class="card">
+                <h3>Gestion cantine prof — alternance</h3>
+                <p class="meta">Outil comptable : suivi des repas, facturation mensuelle, optimisations pour la comptable.</p>
+                <div class="actions"><a class="btn btn-primary" href="https://github.com/AdemeProgrammer/gestion_cantine_prof_alternance" target="_blank" rel="noopener">Repo GitHub</a></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="skills">
+    <div class="wrap">
+        <h2 class="section-title">Compétences</h2>
+        <div class="row">
+            <div class="card"><h3>Langages</h3><p class="meta">PHP, Java, HTML5/CSS3, JavaScript, Python, SQL (MariaDB)</p></div>
+            <div class="card"><h3>Frameworks &amp; outils</h3><p class="meta">Symfony (avancé), jQuery, Bootstrap, JavaFX, GLPI, Git &amp; GitHub, WordPress</p></div>
+            <div class="card"><h3>IDE &amp; bureautique</h3><p class="meta">Suite JetBrains, IDLE, Suite Office</p></div>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="wrap">
+        <h2 class="section-title">Contact</h2>
+        <div class="row">
+            <div class="card">
+                <h3>Discutons</h3>
+                <p class="meta">Un projet, une question&nbsp;? Je réponds rapidement par email ou LinkedIn.</p>
+                <div class="actions">
+                    <a class="btn btn-primary" href="mailto:leomnes25@gmail.com">Envoyer un email</a>
+                    <a class="btn btn-ghost" href="https://www.linkedin.com/in/l%C3%A9o-omnes-a8a0b5346/" target="_blank" rel="noopener">LinkedIn</a>
+                    <a class="btn btn-ghost" href="https://github.com/ollo25" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </div>
+            <div class="card"><h3>Disponibilité</h3><p class="meta">Stage & alternance déjà trouvés — ouvert aux échanges techniques et retours.</p></div>
+        </div>
+    </div>
+</section>
+
+<footer><div class="wrap">© <span id="year"></span> Léo OMNES — One-page. Tous les liens sortent (pas de sous-pages).</div></footer>
+
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
 </html>
